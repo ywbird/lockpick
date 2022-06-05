@@ -1,0 +1,176 @@
+.container {
+  border: 0;
+  background-color: midnightblue;
+  display: block;
+  transform: translateY(300px);
+  width: 210px;
+  height: 235px;
+  margin: auto;
+  border-radius: 8px;
+  box-shadow: 0 -60px 0 0 #0f0f43;
+  z-index: 2;
+}
+
+.lockRing {
+  position: relative;
+  margin: auto;
+  transform: translateY(270px);
+  display: block;
+  width: 120px;
+  height: 90px;
+  border: 20px solid gray;
+  border-bottom: 0;
+  border-top-left-radius: 80px;
+  border-top-right-radius: 80px;
+  background-color: transparent;
+  z-index: 1;
+}
+.lockRing.unlocked {
+  transform: translateY(230px);
+}
+.lockRing .lockRingBottom {
+  position: absolute;
+  margin: auto;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: gray;
+  border-radius: 10px;
+}
+.lockRing .lockRingBottom.a {
+  transform: translate(-20px, 80px);
+}
+.lockRing .lockRingBottom.a.unlocked {
+  height: 60px;
+}
+.lockRing .lockRingBottom.b {
+  transform: translate(120px, 80px);
+}
+
+.lockpad {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  transform: translateY(35px);
+}
+
+.try {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.submit {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 45px);
+  display: block;
+  width: 70px;
+  height: 27px;
+  border: 0;
+  border-radius: 2px;
+  background-color: #e67248;
+  box-shadow: 0 -6px 0 0 #b35938;
+  transition: ease-out 0.1s;
+}
+.submit:disabled {
+  background-color: #979797;
+  box-shadow: 0 -6px 0 0 #767676;
+}
+.submit:hover {
+  transform: translate(-50%, 44px);
+}
+.submit:hover:enabled {
+  box-shadow: 0 -5px 0 0 #b35938;
+}
+.submit:hover:disabled {
+  box-shadow: 0 -5px 0 0 #767676;
+}
+.submit:active:enabled {
+  transform: translate(-50%, 40px);
+  box-shadow: 0 -1px 0 0 #b35938;
+}
+
+.lockBtnColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.lockBtn {
+  display: block;
+  width: 23px;
+  height: 21px;
+  margin: 5px;
+  border-radius: 3px;
+  box-shadow: 0 -4px 0 0 grey;
+  transition: ease-out 0.2s;
+}
+.lockBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 -3px 0 0 grey;
+}
+.lockBtn:active {
+  transform: translateY(-3px);
+  box-shadow: 0 -1px 0 0 grey;
+}
+
+.lockBtn.default {
+  background-color: lightgrey;
+}
+
+.lockBtn.right {
+  box-shadow: 0 -4px 0 0 #8ac28a;
+  background-color: lightgreen;
+}
+.lockBtn.right:hover {
+  box-shadow: 0 -3px 0 0 #8ac28a;
+  transform: translatey(-1px);
+}
+
+.lockBtn.wrong {
+  box-shadow: 0 -4px 0 0 #c38080;
+  background-color: lightcoral;
+}
+.lockBtn.wrong:hover {
+  box-shadow: 0 -3px 0 0 #c38080;
+  transform: translatey(-1px);
+}
+
+.try {
+  display: flex;
+  flex-direction: row;
+}
+.try .tryLight {
+  display: block;
+  width: 13px;
+  height: 13px;
+  margin: 2px 2px;
+  transform: translateY(10px);
+  border-radius: 50%;
+}
+.try .tryLight.used {
+  background-color: indianred;
+}
+.try .tryLight.remain {
+  background-color: lightgreen;
+}
+
+.reset {
+  border: 0;
+  border-radius: 8px;
+  background-color: coral;
+  display: block;
+  width: 60px;
+  height: 30px;
+  box-shadow: 0 5px 0 0 #b35938;
+}
+.reset:hover {
+  transform: translateY(1px);
+  box-shadow: 0 4px 0 0 #b35938;
+}
+.reset:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 0 #b35938;
+}
+
+/*# sourceMappingURL=style.css.map */
